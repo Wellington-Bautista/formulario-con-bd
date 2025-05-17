@@ -19,7 +19,7 @@ export const alertaConOpciones = (tipoAlerta, titulo, texto) => {
         if (result.isConfirmed) {
             const matricula = document.getElementById("inputMatricula").value;
             const formularioContainer = document.querySelector(".formularioContainer");
-            fetch(`http://localhost:3000/borrar?matricula=${matricula}`, {
+            fetch(`https://formulariobd-back.onrender.com/borrar?matricula=${matricula}`, {
                 method: "DELETE"
             })
                 .then(response => {
