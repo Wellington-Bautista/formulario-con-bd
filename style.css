@@ -1,0 +1,13 @@
+.form{
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+.estudianteInfo{
+    min-width: 300px;
+}
+.botonAccion{
+    margin: 10px;
+}
