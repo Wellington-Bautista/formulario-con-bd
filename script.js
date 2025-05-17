@@ -17,7 +17,7 @@ const verificarInputMatricula = () => {
 const consultarEstudiante = () => {
     let matricula = verificarInputMatricula();
     if (matricula !== undefined) {
-        fetch(`http://localhost:3000/consulta?matricula=${matricula}`)
+        fetch(`https://formulariobd-back.onrender.com/consulta?matricula=${matricula}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error("Error al consultar la matrícula");
@@ -40,7 +40,7 @@ const registrarEstudiante = () => {
         direccion: inputDireccion.value
     };
 
-    fetch("http://localhost:3000/registro", {
+    fetch("https://formulariobd-back.onrender.com/registro", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -145,7 +145,7 @@ const crearFormulario = (tipoDeFormulario, data) => {
                 telefono: inputTelefono.value,
                 direccion: inputDireccion.value
             };
-            fetch(`http://localhost:3000/actualizar`, {
+            fetch(`https://formulariobd-back.onrender.com/actualizar`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
